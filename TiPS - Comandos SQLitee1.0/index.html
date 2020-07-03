@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css" />
+        <script src="main.js"></script>
+        <script src="banco.js"></script>
+        <title>Marmitex</title>
+    </head>
+
+	
+	<style>
+	
+	
+	
+	
+	.menu ul{
+   margin: 0;
+   background-color: blue;
+   list-style: none;
+  }
+  .menu ul li{
+   display: inline;
+
+  }
+  .menu ul li a{
+   padding: 2px 10px;
+   display: inline-block;
+   color: white;
+   text-decoration: none;
+  }
+  .menu ul li a:hover{
+   color: black;
+
+  }
+  
+  
+  
+  
+  
+  .menu ul ul {
+  position:absolute;
+  visibility : hidden;
+  
+  }
+  
+  .menu ul li:hover ul{
+  visibility : visible;
+  
+  }
+  
+ 
+ 
+ modal {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 20%;
+  }
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+
+  
+}
+.modal-content {
+    box-shadow: 0 0 0 5px blue;
+    border: none;
+
+  }
+  
+ </style>
+	
+	
+
+	
+	<!-- Modal -->
+<div class="modal fade"  id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Cadastro Cliente</h4>
+      </div>
+      <div class="modal-body">
+	 
+                    
+                    <p> Nome <input type="text" id="appt" name="appt" ng-model="txentrada"> </p>
+					<p> CPF </p>
+					<p> Nome </p>
+					<p> Nome </p>
+                
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+        <button type="button" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	
+	
+	
+	
+	<div class="menu">   
+  <ul>
+    <li><a href="#myModal">Cliente</a></li>
+
+    <li><a href='#'>Ajuda</a>
+<ul>
+<li><a href="#">Criação de sites </a>
+</li>
+  
+ 
+  </ul>
+	  </div>
+	
+        <h1>Marmitex</h1>
+        <div class="aligncenter">
+            <form class="form">
+                <input type="hidden" id="field-id" value="" />
+                <div class="box">
+                    <input type="text" id="field-name"/>
+                    <label for="field-name">Nome</label>
+                </div>
+
+                <div class="box">
+                    <input type="text" id="field-pedido"/>
+                    <label for="field-pedido">Pedido</label>
+                </div>
+
+                <div class="box">
+                    <input type="text" id="field-quantidade"/>
+                    <label for="field-quantidade">Quantidade</label>
+                </div>
+				<div class="box">
+                    <input type="text" id="field-Detalhes"/>
+                    <label for="field-Detalhes">Detalhes</label>
+                </div>
+				<div class="box">
+                    <input type="text" id="field-situacao"/>
+                    <label for="field-situacao">Situacao</label>
+                </div>
+                <div class="per"><a id="btn-salvar" class="button" >SALVAR</a></div>
+                <div class="per"><a id="btn-deletar" class="button" >DELETAR</a></div>
+				 <div class="per"><a id="btn-finalizar" class="button" >FINALIZAR</a></div>
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Cadastro Cliente
+</button>
+            </form>
+            <table id="table-register">
+                <thead>
+				
+                    <th>Cliente</th>
+                    <th>Pedido</th>
+					  <th>Quantidade</th>
+					
+					<th>Detalhes</th>
+					<th>Situaçao</th>
+                    
+                </thead>
+                <tbody id="tbody-register">
+                
+				
+				
+				
+				
+                </tbody>
+				
+				
+				
+            </table>
+			
+			 
+    
+			
+			
+        </div>
+		
+		
+    </body>
+
+</html>

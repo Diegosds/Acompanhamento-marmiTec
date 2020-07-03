@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css" />
+	 <script src="main.js"></script>
+      <script src="banco.js"></script>
+		<meta name="viewport" content="wifth=device-width, initial-scale=1.0"/>
+        <title>Marmitex</title>
+    </head>
+
+	
+
+	
+
+	
+	
+	
+	<!-- Modal Cadastro do Cliente-->
+<div class="modal fade"  id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Cadastro Cliente</h4>
+      </div>
+      <div class="modal-body">
+	 
+                    
+                    <p> Nome <p>
+					<input type="text" id="nomeCliente"> </p>
+					<p> CPF <p> 
+					<input type="text" id="cpfCliente"></p>
+					
+					<p> Telefone<p>  
+					<input type="text" id="numeroCliente"></p>
+					
+                
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+        <button type="button" class="btn btn-primary" id="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	<!-- Modal Pesquisa por cliente-->
+<div class="modal fade"  id="myModall" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabell">Pesquisa Cliente</h4>
+      </div>
+      <div class="modal-body">
+	 
+                    
+					 <table id="table-registerr">
+                <thead>
+				       <p> Pesquisa <p>
+					<input type="text" id="pesquisarCliente"> </p>
+                    
+					 
+                    
+                </thead>
+                <tbody id="tbody-registerr">
+                
+				
+				
+				
+				
+                </tbody>
+				
+				
+				
+            </table>
+					
+                 
+					
+					
+                
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id = "lll" >Sair</button>
+        <button type="button" class="btn btn-primaryy" id="btn btn-primaryy">Pesquisar</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="menu">   
+  <ul>
+   
+
+    <li><a>Relatorios</a>
+<ul>
+<li><a href="Telalogin.html">Relatorio Clientes </a>
+<ul>
+<li><a href="Telalogin.html">Relatorio Pedidos </a>
+</li>
+  
+ 
+  </ul>
+	  </div>
+	
+        <h1>Marmitex</h1>
+        <div class="aligncenter">
+            <form class="form">
+                <input type="hidden" id="field-id" value="" />
+                <div class="box">
+
+                    <input type="text" id="field-name" readonly=“true”/>
+					
+                    <label for="field-name">Nome</label> 
+				
+                </div>
+
+                <div class="box">
+                    <input type="text" id="field-pedido"/>
+                    <label for="field-pedido">Pedido</label>
+                </div>
+
+                <div class="box">
+                    <input type="text" id="field-quantidade"/>
+                    <label for="field-quantidade">Quantidade</label>
+                </div>
+				<div class="box">
+                    <input type="text" id="field-Detalhes"/>
+                    <label for="field-Detalhes">Detalhes</label>
+                </div>
+				
+                <div class="per"><a id="btn-salvar" class="button" >SALVAR</a></div>
+                <div class="per"><a id="btn-deletar" class="button" >DELETAR</a></div>
+				 <div class="per"><a id="btn-finalizar" class="button" >FINALIZAR</a></div>
+				 <div class="per"><a id="BotaoCadastro"  class="button" data-toggle="modal" data-target="#myModal" > CADASTRO CLIENTE</a></div>
+                 <div class="per"><a  class="button" data-toggle="modal" data-target="#myModall" > BUSCA CLIENTE</a>
+				
+				 </div>
+				 
+			</form>
+            <table id="table-register">
+                <thead>
+				
+                    <th>Cliente</th>
+                    <th>Pedido</th>
+					  <th>Quantidade</th>
+					
+					<th>Detalhes</th>
+					<th >Situaçao</th>
+					<th >Data</th>
+                    
+                </thead>
+                <tbody id="tbody-register">
+                
+				
+				
+				
+				
+                </tbody>
+				
+				
+				
+            </table>
+			
+			 
+    
+			
+			
+        </div>
+		
+		
+    </body>
+
+</html>

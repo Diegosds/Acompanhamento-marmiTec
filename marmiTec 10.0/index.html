@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css" />
+	 <script src="main.js"></script>
+      <script src="banco.js"></script>
+		<meta name="viewport" content="wifth=device-width, initial-scale=1.0"/>
+        <title>Marmitex</title>
+		
+		<style>
+		td  {
+ 
+  text-align: center;
+}
+th {
+background : #0B0B61;
+text-align: center;
+}
+
+#table-registerr {
+ width: 100%;
+  margin-bottom : .5em;
+  table-layout: fixed;
+  text-align: center;
+} 
+		</style>
+		
+    </head>
+
+	
+ <div class="menu"> 
+   <ul>
+   
+ <li><a  id = "idcaixadodia" data-toggle="modal" data-target="#myModallll" > Caixa</a>
+ <a href = "Relatorios\RelatorioPedidos.html" target ="_blank">Relatorio de Pedidos</a>
+ <a href = "Relatorios\RelatorioCaixa.html" target ="_blank" >Relatorio de Caixa</a>
+ <a href = "Relatorios\ListagemClientes.html" target ="_blank" > Listagem Clientes</a>
+ <a>Ajuste Valor</a>
+
+ <a id = "idsobre" data-toggle="modal" data-target="#myModalllll">Sobre</a>
+ </li>
+ <ul>
+	</div>
+	<!-- Detalhes Pedido-->
+<div class="modal fade"  id="myModalll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Detalhe Pedido</h4>
+      </div>
+      <div class="modal-body">
+	 
+                    
+                 <div id="detalhepedi"></div>
+					
+					
+                
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+
+	
+	<!-- Modal Caixa-->
+<div class="modal fade"  id="myModallll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Caixa Do Dia</h4>
+      </div>
+      <div class="modal-body">
+	 
+                      
+				       <h2>  Pendentes <h2>
+					    <div id="caixapendentes"></div>
+						<h2>  Finalizados <h2>
+					    <div id="caixafinalizados"></div>
+				       	<h2>  Total <h2>
+                        <div id="caixadia"> </div> 
+					     
+                
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+		 <button type="button" class="btn btn-default" id = "registrarCaixa" data-dismiss="modal">Registrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	<!-- Modal Sobre-->
+<div class="modal fade"  id="myModalllll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabelllll">Sobre</h4>
+      </div>
+      <div class="modal-body">
+	 
+                    
+                   
+					<h2> Desenvolvedores </h2> 
+					 <h5> Diego Santos  </h5>
+					 <h5> Allan Kaio  </h5>
+					
+					<h2> Versão </h2>  
+					<h5> 1.0 </h5>  
+					
+					
+                
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	
+	
+	<!-- Modal Cadastro do Cliente-->
+<div class="modal fade"  id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Cadastro Cliente</h4>
+      </div>
+      <div class="modal-body">
+	 
+                    
+                    <p> Nome <p>
+					<input type="text" id="nomeCliente"> </p>
+					<p> CPF <p> 
+					<input type="text"  maxlength="11" id="cpfCliente"></p>
+					
+					<p> Telefone<p>  
+					<input type="text"  maxlength="11" id="numeroCliente"></p>
+					
+                
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id = "llll">Sair</button>
+        <button type="button" class="btn btn-primary" id="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	<!-- Modal Pesquisa por cliente-->
+<div class="modal fade"  id="myModall" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabell">Pesquisa Cliente</h4>
+      </div>
+      <div class="modal-body">
+	 
+                    
+					 <table id="table-registerr">
+                <thead>
+				       <p> Pesquisa <p>
+					<input type="text" id="pesquisarCliente"> </p>
+                    
+					 
+                    
+                </thead>
+                <tbody id="tbody-registerr">
+                
+				
+				
+				
+				
+                </tbody>
+				
+				
+				
+            </table>
+					
+                 
+					
+					
+                
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id = "lll" >Sair</button>
+        <button type="button" class="btn btn-primaryy" id="btn btn-primaryy">Pesquisar</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	
+	
+	
+	 <h1>marmiTec</h1>
+        <div class="aligncenter">
+            <form class="form">
+                <input type="hidden" id="field-id" value="" />
+                <div class="box">
+
+                    <input type="text" id="field-name" readonly=“true”/>
+					
+                    <label for="field-name">Nome</label> 
+				
+                </div>
+
+                <div class="box">
+                    <input type="text" id="field-pedido"/>
+                    <label for="field-pedido">Carne</label>
+                </div>
+
+                <div class="box">
+                    <input type="number"  id="field-quantidade"/>
+                    <label for="field-quantidade">Quantidade</label>
+                </div>
+				<div class="box">
+                    <input type="text" id="field-Detalhes"/>
+                    <label for="field-Detalhes">Detalhes</label>
+                </div>
+				
+                <div class="per"><a id="btn-salvar" class="button" >SALVAR</a></div>
+                <div class="per"><a id="btn-deletar" class="button" >DELETAR</a></div>
+				 <div class="per"><a id="btn-finalizar" class="button" >FINALIZAR</a></div>
+				 <div class="per"><a id="BotaoCadastro"  class="button" data-toggle="modal" data-target="#myModal" > CADASTRO CLIENTE</a></div>
+                 <div class="per"><a  class="button" onclick =  "limpaCampo();" data-toggle="modal" data-target="#myModall" > BUSCA CLIENTE</a></div>
+				 <div class="per"><a  class="button" data-toggle="modal" data-target="#myModalll" > DETALHE PEDIDO</a>
+				
+				 </div>
+				 
+			</form>
+            <table id="table-register">
+                <thead>
+				
+                    <th>Cliente</th>
+                    <th>Carne</th>
+					  <th>Quantidade</th>
+					
+					
+					<th >Situaçao</th>
+					<th >Hora</th>
+					<th >R$</th>
+                    
+                </thead>
+                <tbody id="tbody-register">
+                
+				
+				
+				
+				
+                </tbody>
+				
+				
+				
+            </table>
+			
+			 
+    
+			
+			
+        </div>
+		
+		
+    </body>
+
+</html>
